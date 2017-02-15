@@ -78,4 +78,8 @@
     <string name="escaneando">Escaneando...</string>
     <string name="escanear">Escanear</string>
     <string name="title_activity_configuracion_paso1">ConfiguracionPaso1Activity</string>
+    <string name="hint_ncanales_config">Nº de Canales (Mínimo 1)</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="configuracion_paso_1">Configuración Paso 1</string>
+    <string name="hint_alias_del_controlador">Alias del controlador</string>
 </resources>
