@@ -15,7 +15,7 @@ public class MainActivity extends MaterialNavigationDrawer{
 
         addSection(newSection("Inicio", R.drawable.ic_arrow_drop_up_white_24dp, InicioFragment.newInstance()));//Inicio
         addDivisor();
-        addBottomSection(newSection("Ajustes", R.drawable.ic_arrow_drop_down_white_24dp, new Intent(this, SettingActivity.class)));
+        addBottomSection(newSection("Ajustes", R.drawable.ic_setting, new Intent(this, SettingActivity.class)));
     }
 
 }
