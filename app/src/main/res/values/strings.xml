@@ -82,4 +82,5 @@
     <string name="aceptar">Aceptar</string>
     <string name="configuracion_paso_1">Configuración Paso 1</string>
     <string name="hint_alias_del_controlador">Alias del controlador</string>
+    <string name="configuracion_paso_2">Configuración Paso 2</string>
 </resources>
