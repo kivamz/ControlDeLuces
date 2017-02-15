@@ -13,7 +13,7 @@ public class MainActivity extends MaterialNavigationDrawer{
     public void init(Bundle savedInstanceState) {
         setBackPattern(MaterialNavigationDrawer.BACKPATTERN_BACK_TO_FIRST);
 
-        addSection(newSection("Inicio", R.drawable.ic_arrow_drop_up_white_24dp, InicioFragment.newInstance()));//Inicio
+        addSection(newSection("Inicio", R.drawable.ic_arrow_drop_down_white_24dp, InicioFragment.newInstance()));//Inicio
         addDivisor();
         addBottomSection(newSection("Ajustes", R.drawable.ic_setting, new Intent(this, SettingActivity.class)));
     }
