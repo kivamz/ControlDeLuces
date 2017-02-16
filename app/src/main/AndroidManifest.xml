@@ -6,25 +6,32 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/MyNavigationDrawerTheme">
+        android:theme="@style/MyNavigationDrawerTheme"
+        android:allowBackup="true">
         <activity android:name=".MainActivity">
+        </activity>
+
+        <activity android:name=".SettingActivity" />
+
+        <activity
+            android:name=".ConfiguracionPaso1Activity"
+            android:label="@string/title_activity_configuracion_paso1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingActivity" />
-        <activity
-            android:name=".ConfiguracionPaso1Activity"
-            android:label="@string/title_activity_configuracion_paso1" />
+
         <activity
             android:name=".ConfiguracionPaso2Activity"
-            android:label="@string/title_activity_configuracion_paso2"></activity>
+            android:label="@string/title_activity_configuracion_paso2">
+
+        </activity>
+
     </application>
 
 </manifest>
