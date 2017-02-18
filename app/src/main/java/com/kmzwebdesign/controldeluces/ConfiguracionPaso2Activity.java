@@ -1,9 +1,11 @@
 package com.kmzwebdesign.controldeluces;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -11,7 +13,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class ConfiguracionPaso2Activity extends Activity {
+public class ConfiguracionPaso2Activity extends AppCompatActivity {
 
     EditText[] nombre_canales;
     private SharedPreferences sharedPreferences;
@@ -58,19 +60,19 @@ public class ConfiguracionPaso2Activity extends Activity {
                         }
 
                     }
-                    editor.putBoolean("login", true);
+                    editor.putBoolean("config_ini", true);
                     editor.putInt("numeroControladores", 1);
                     editor.putString("nombreControlador_1", nombreControlador);
                     editor.putInt("canalesControlador_1", numeroCanales);
 
                     if(editor.commit()){
                         Toast.makeText(getApplicationContext(), "Configuración finalizada.", Toast.LENGTH_LONG).show();
-                        //startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         finish();
                     }
                 }
             });
-            ll_lista_canales.addView(button, new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            ll_lista_canales.addView(button);
         }
     }
 

@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class ConfiguracionPaso1Activity extends Activity {
+public class ConfiguracionPaso1Activity extends AppCompatActivity {
 
     private Button btn_guardar_alias;
     private int num_canales = 0;
@@ -24,9 +25,9 @@ public class ConfiguracionPaso1Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion_paso1);
 
-        sharedPreferences = this.getSharedPreferences("config", MODE_PRIVATE);
+        sharedPreferences = this.getSharedPreferences("config_ini", MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
-        if(sharedPreferences.getBoolean("login", true)){
+        if(sharedPreferences.getBoolean("config_ini", false)){
             startActivity(new Intent(this, MainActivity.class));
             finish();
         }
@@ -64,8 +65,7 @@ public class ConfiguracionPaso1Activity extends Activity {
     protected void onResume() {
         super.onResume();
         sharedPreferences = this.getSharedPreferences("config", MODE_PRIVATE);
-        final SharedPreferences.Editor editor = sharedPreferences.edit();
-        if(sharedPreferences.getBoolean("login", true)){
+        if(sharedPreferences.getBoolean("config_ini", false)){
             startActivity(new Intent(this, MainActivity.class));
             finish();
         }
