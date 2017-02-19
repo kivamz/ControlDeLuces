@@ -25,7 +25,7 @@ public class ConfiguracionPaso1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion_paso1);
 
-        sharedPreferences = this.getSharedPreferences("config_ini", MODE_PRIVATE);
+        sharedPreferences = this.getSharedPreferences("config", MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
         if(sharedPreferences.getBoolean("config_ini", false)){
             startActivity(new Intent(this, MainActivity.class));
